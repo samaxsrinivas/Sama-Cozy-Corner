@@ -17,14 +17,14 @@ const app = {
             theHTML += "<h5>" + app.books[i].volumeInfo.subtitle + "</h5>";
             theHTML += "<p>" + app.books[i].volumeInfo.description + "</p>";
             // theHTML += "<a href=" + app.books[i].items.selfLink + ">" + "Click here for more!" + "</a>";
-            theHTML += "<p class='links'>" + app.books[i].selfLink + "</p>";
+            // theHTML += "<p class='links'>" + app.books[i].selfLink + "</p>";
             theHTML += "</div>";
         }
         $('.container').html(theHTML);
     },
     fetchBooks: function() {
 
-        var myKey = 'yourAPIKey';
+        var myKey = '';
         var myURL = 'https://www.googleapis.com/books/v1/users/105358489593807934540/bookshelves/3/volumes?key=';
         var url = myURL + myKey;
         // console.log(url);
