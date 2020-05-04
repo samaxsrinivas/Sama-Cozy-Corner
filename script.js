@@ -51,8 +51,9 @@ const app = {
         }
         $('.modal-content').html(theHTML);
     },
+
     // sliceObjects: function() {
-    //     var click = [].slice.call(document.getElementsByClassName("books"));
+    //     var click = app.books.slice.call(document.getElementsByClassName("booksmoda"));
 
     //     click.forEach(function(element, index) {
     //         element.addEventListener("click", function() {
@@ -60,6 +61,7 @@ const app = {
     //         });
     //     });
     // },
+
     fetchBooks: function() {
 
         var myKey = 'AIzaSyBKsMtuOP_CVY-6aDMoBf8V3oPYBXzksNE';
@@ -80,7 +82,6 @@ const app = {
             success: function(data) {
                 console.log(data);
                 app.books = data.items;
-                // app.sliceObjects(data);
                 app.makeHTML(data);
             }
         })
