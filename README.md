@@ -2,4 +2,4 @@
  
 Reading list addition to portfolio.
 
-Utilizing Google Books API and Web GL.
+Utilizing Google Books API.
