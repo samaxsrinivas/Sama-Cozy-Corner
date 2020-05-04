@@ -1,46 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    font-family: Roboto;
 }
 
-h2 {
-    margin-left: 50px;
-    margin-top: 25px;
-}
-
-.wrap {
-    margin: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.instructions {
-    margin-right: 50px;
-    text-align: center;
-}
-
-.container {
-    width: 60%;
-}
-
-.popularArticles {
-    padding: 25px;
+.mainBody {
+    width: 100%;
     background-color: #f2f2f2;
 }
 
-.links {
-    text-decoration: underline;
-    color: rgba(28, 28, 129, 0.6);
+.mainCover {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
 }
 
-button {
-    color: black;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-transform: uppercase;
+.plant2 {
+    width: 100%;
 }
 
-.listSpaceMembers {
-    background-color: salmon;
+.title {
+    z-index: 3;
+    position: absolute;
+    top: 47%;
+    left: 100px;
+    font-size: 140px;
+    font-family: Dancing Script;
+    font-weight: 100;
 }
+
+.title2 {
+    z-index: 3;
+    position: absolute;
+    top: 62%;
+    left: 95px;
+    font-size: 100px;
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.subtitle {
+    z-index: 3;
+    position: absolute;
+    top: 80%;
+    left: 100px;
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+.downArrow {
+    z-index: 3;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+}
+
+.bounce {
+    -moz-animation: bounce 3s infinite;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite;
+}
+
+@-moz-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@-webkit-keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+    }
+    60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+    }
+}
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 10;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    z-index: 11;
+}
+
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal-header {
+    width: 60vw;
+    margin: auto;
+    text-align: center;
+}
+
+
+/* The Close Button */
+
+.close {
+    color: white;
+    font-size: 60px;
+    font-weight: 400;
+    z-index: 101;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+}
+
+.plant4 {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.textbox {
+    margin: 0;
+    width: 275px;
+    height: 200px;
+    position: absolute;
+    top: 45%;
+    left: 540px;
+    transform: rotate(20.5deg);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.directions {
+    position: relative;
+    word-wrap: break-word;
+    font-family: Roboto;
+    font-weight: 200;
+    font-size: 27px;
+}
+
+.section1 {
+    position: relative;
+}
+
+.popup {
+    cursor: pointer;
+}
+
+.pillow1 {
+    position: absolute;
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    top: 100px;
+    right: 0;
+}
+
+.book1 {
+    position: absolute;
+    width: 20%;
+    height: auto;
+    object-fit: cover;
+    top: 110px;
+    right: 16%;
+    z-index: 10;
+}
+
+
+/* object css */
+
+.books {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    height: 60vh;
+    justify-content: space-evenly;
+    overflow: scroll;
+    z-index: 100;
+}
+
+.left {
+    width: 40%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right {
+    width: 60%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 50px;
+    overflow: auto;
+}
+
+.bookCover {
+    width: auto;
+    height: 75%;
+    object-fit: cover;
+}
+
+.bookTitle {
+    font-family: roboto;
+    font-size: 4rem;
+    color: #666666;
+}
+
+.author {
+    padding-bottom: 25px;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #b8b8b8;
+}
+
+.author:first-of-type {
+    font-family: Dancing Script;
+    font-size: 2.5rem;
+}
+
+.desctiption {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+
+/* html.has-scroll-smooth {
+    overflow: hidden;
+}
+
+html.has-scroll-dragging {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.has-scroll-smooth body {
+    overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+    min-height: 100vh;
+}
+
+.c-scrollbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 11px;
+    height: 100vh;
+    transform-origin: center right;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+}
+
+.c-scrollbar:hover {
+    transform: scaleX(1.45);
+}
+
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+    opacity: 1;
+}
+
+.c-scrollbar_thumb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.5;
+    width: 7px;
+    border-radius: 10px;
+    margin: 2px;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
+.has-scroll-dragging .c-scrollbar_thumb {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+} */
