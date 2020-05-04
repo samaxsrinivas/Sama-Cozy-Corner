@@ -39,15 +39,27 @@ const app = {
         var theHTML = '';
         for (var i = 0; i < app.books.length; i++) {
             theHTML += "<div class='books'>";
-            theHTML += "<img src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
-            theHTML += "<h3>" + app.books[i].volumeInfo.title + "</h3>";
-            // theHTML += "<h5>" + app.books[i].volumeInfo.subtitle + "</h5>";
-            theHTML += "<p>" + app.books[i].volumeInfo.authors + "</p>";
-            theHTML += "<p>" + app.books[i].volumeInfo.description + "</p>";
+            theHTML += "<div class='left'>";
+            theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
+            theHTML += "</div>";
+            theHTML += "<div class='right'>";
+            theHTML += "<h3 class='bookTitle'>" + app.books[i].volumeInfo.title + "</h3>";
+            theHTML += "<h5 class='author'>" + "By " + app.books[i].volumeInfo.authors + "</h5>";
+            theHTML += "<p class='description'>" + app.books[i].volumeInfo.description + "</p>";
+            theHTML += "</div>";
             theHTML += "</div>";
         }
         $('.modal-content').html(theHTML);
     },
+    // sliceObjects: function() {
+    //     var click = [].slice.call(document.getElementsByClassName("books"));
+
+    //     click.forEach(function(element, index) {
+    //         element.addEventListener("click", function() {
+    //             console.log(index);
+    //         });
+    //     });
+    // },
     fetchBooks: function() {
 
         var myKey = 'AIzaSyBKsMtuOP_CVY-6aDMoBf8V3oPYBXzksNE';
@@ -66,8 +78,9 @@ const app = {
                 console.log(err);
             },
             success: function(data) {
-                // console.log(data);
+                console.log(data);
                 app.books = data.items;
+                // app.sliceObjects(data);
                 app.makeHTML(data);
             }
         })

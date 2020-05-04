@@ -164,12 +164,13 @@ body {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s
+    animation-duration: 0.4s;
+    z-index: 11;
 }
 
 
@@ -197,15 +198,21 @@ body {
     }
 }
 
+.modal-header {
+    width: 60vw;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
 
 /* The Close Button */
 
 .close {
     color: black;
-    float: right;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bold;
-    z-index: 11;
+    z-index: 101;
 }
 
 .close:hover,
@@ -216,7 +223,7 @@ body {
 }
 
 section {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: 1;
     position: relative;
@@ -263,7 +270,7 @@ section {
     width: 50%;
     height: auto;
     object-fit: cover;
-    top: -110px;
+    top: 100px;
     right: 0;
 }
 
@@ -272,56 +279,77 @@ section {
     width: 20%;
     height: auto;
     object-fit: cover;
-    top: -100px;
+    top: 110px;
     right: 16%;
     z-index: 10;
 }
 
 
-/* h2 {
-    margin-left: 50px;
-    margin-top: 25px;
-}
+/* object css */
 
-.wrap {
-    margin: 50px;
+.books {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    width: 60vw;
+    height: 60vh;
+    justify-content: space-evenly;
+    overflow: scroll;
+    z-index: 100;
+}
+
+.left {
+    width: 40%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.instructions {
-    margin-right: 50px;
-    text-align: center;
-}
-
-.container {
+.right {
     width: 60%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-right: 50px;
+    overflow: auto;
 }
 
-.popularArticles {
-    padding: 25px;
-    background-color: #f2f2f2;
+.bookCover {
+    width: auto;
+    height: 75%;
+    object-fit: cover;
 }
 
-.links {
-    text-decoration: underline;
-    color: rgba(28, 28, 129, 0.6);
+.bookTitle {
+    font-family: roboto;
+    font-size: 4rem;
+    color: #666666;
 }
 
-button {
-    color: black;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-    text-transform: uppercase;
+.author {
+    padding-bottom: 25px;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #b8b8b8;
 }
 
-.listSpaceMembers {
-    background-color: salmon;
-} */
+.author:first-of-type {
+    font-family: Dancing Script;
+    font-size: 2.5rem;
+}
 
-html.has-scroll-smooth {
+
+}
+.desctiption {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+/* html.has-scroll-smooth {
     overflow: hidden;
 }
 
@@ -377,4 +405,4 @@ html.has-scroll-dragging {
 .has-scroll-dragging .c-scrollbar_thumb {
     cursor: -webkit-grabbing;
     cursor: grabbing;
-}
+} */
