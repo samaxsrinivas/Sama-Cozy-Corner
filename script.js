@@ -13,31 +13,34 @@ const app = {
         var theHTML = '';
         for (var i = 0; i < app.books.length; i++) {
             theHTML += "<div class='books'>";
+            theHTML += "<img src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
             theHTML += "<h3>" + app.books[i].volumeInfo.title + "</h3>";
-            theHTML += "<h5>" + app.books[i].volumeInfo.subtitle + "</h5>";
+            // theHTML += "<h5>" + app.books[i].volumeInfo.subtitle + "</h5>";
+            theHTML += "<p>" + app.books[i].volumeInfo.authors + "</p>";
             theHTML += "<p>" + app.books[i].volumeInfo.description + "</p>";
-            // theHTML += "<a href=" + app.books[i].items.selfLink + ">" + "Click here for more!" + "</a>";
-            // theHTML += "<p class='links'>" + app.books[i].selfLink + "</p>";
             theHTML += "</div>";
         }
         $('.container').html(theHTML);
     },
     fetchBooks: function() {
 
-        var myKey = '';
+        var myKey = 'AIzaSyBKsMtuOP_CVY-6aDMoBf8V3oPYBXzksNE';
         var myURL = 'https://www.googleapis.com/books/v1/users/105358489593807934540/bookshelves/3/volumes?key=';
+        // var maxResults = '/maxResults=20';
         var url = myURL + myKey;
         // console.log(url);
         $.ajax({
             url: url,
             type: 'GET',
             dataType: 'json',
+            // startIndex: 0,
+            // maxResults: 20,
             error: function(err) {
                 console.log("Uh oh...");
                 console.log(err);
             },
             success: function(data) {
-                // console.log(data);
+                console.log(data);
                 app.books = data.items;
                 app.makeHTML(data);
             }
