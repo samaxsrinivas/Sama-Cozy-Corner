@@ -9,15 +9,30 @@ body {
 
 .mainBody {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     background-color: #f2f2f2;
 }
 
+.plantOne {
+    width: 50%;
+    z-index: 3;
+    transform: rotate(270deg);
+    position: relative;
+    text-align: right;
+}
+
 .verticalLines {
+    display: flex;
+    flex-direction: row;
+}
+
+.one,
+.two,
+.three,
+.four {
     border-right: 1px solid rgb(85, 85, 85);
     width: 25%;
     height: 1000px;
+    z-index: 1;
 }
 
 .four {
