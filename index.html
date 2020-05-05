@@ -45,8 +45,9 @@
             <div class="modal-header">
                 <span class="close">&times;</span>
             </div>
-            <!-- Modal content -->
-            <div class="modal-content">
+            <div class="modal-content" id="firstBox">
+            </div>
+            <div class="modal-content" id="secondBox">
             </div>
         </div>
 
@@ -54,16 +55,16 @@
         <!-- Trigger/Open The Modal -->
         <div class="section1">
             <img class="pillow1" src="images/pillow1.png">
-            <button class="popup">
-                <img id="listBooks" class="book1 " src="images/book1.png">
+            <button>
+                <img id="listBooks" class="popup book1" src="images/book1.png" href="#firstBox">
             </button>
         </div>
 
         <div class="section2 ">
             <img class="couch1 " src="images/couch1.png ">
             <img class="blanket1 " src="images/blanket1.png ">
-            <button class="popup">
-                <img class="book2 " src="images/book2.png ">
+            <button>
+                <img class="popup book2" src="images/book2.png" href="#secondBox">
             </button>
 
         </div>

@@ -140,6 +140,7 @@ body {
     z-index: 10;
     /* Sit on top */
     padding-top: 100px;
+    padding-bottom: 100px;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -221,6 +222,10 @@ body {
     cursor: pointer;
 }
 
+.popup {
+    cursor: pointer;
+}
+
 
 /* directions */
 
@@ -268,11 +273,6 @@ section {
     width: 100vw;
     height: 100vh;
     position: relative;
-}
-
-.popup {
-    cursor: pointer;
-    text-decoration: none;
 }
 
 .pillow1 {
