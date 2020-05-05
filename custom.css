@@ -227,6 +227,10 @@ body {
     cursor: pointer;
 }
 
+#secondBox {
+    padding-bottom: 100px;
+}
+
 
 /* directions */
 
