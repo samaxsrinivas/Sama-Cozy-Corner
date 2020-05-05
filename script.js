@@ -10,8 +10,9 @@ const app = {
     },
 
     makeHTML: function() {
+        var myTargetModal = $(this).attr('#firstBox');
         var theHTML = '';
-        for (var i = 0; i < app.books.length; i++) {
+        for (var i = 0; i < 1; i++) {
             theHTML += "<div class='books'>";
             theHTML += "<div class='left'>";
             theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
@@ -23,18 +24,54 @@ const app = {
             theHTML += "</div>";
             theHTML += "</div>";
         }
-        $('.modal-content').html(theHTML);
+        // $(myTargetModal).html(theHTML);
+        $(document).on('click', myTargetModal, function() {
+            $('#firstBox').html(theHTML);
+        });
     },
 
-    // imageAppend: function() {
-    //     // const data = app.books[i];
-    //     // const images = $(document.getElementsByTagName("button")).length;
+    makeHTMLTwo: function() {
+        var myTargetModal = $(this).attr('#secondBox');
+        var theHTML = '';
+        for (var i = 1; i < 4; i++) {
+            theHTML += "<div class='books'>";
+            theHTML += "<div class='left'>";
+            theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
+            theHTML += "</div>";
+            theHTML += "<div class='right'>";
+            theHTML += "<h3 class='bookTitle'>" + app.books[i].volumeInfo.title + "</h3>";
+            theHTML += "<h5 class='author'>" + "By " + app.books[i].volumeInfo.authors + "</h5>";
+            theHTML += "<p class='description'>" + app.books[i].volumeInfo.description + "</p>";
+            theHTML += "</div>";
+            theHTML += "</div>";
+        }
+        // $(myTargetModal).html(theHTML);
+        $(document).on('click', myTargetModal, function() {
+            $('#secondBox').html(theHTML);
+        });
+    },
 
-    //     function myFunction() {
-    //         document.getElementsByClassName("books")[0].innerHTML = data[1];
-    //     }
-    // },
+    modal: function() {
+        $(document).on('click', '.popup', function() {
+            var myTargetModal = $(this).attr('href');
+            $('#myModal').hide();
+            $('.modal-content').hide();
 
+            $('#myModal').fadeIn();
+            $(myTargetModal).fadeIn();
+            return false;
+        });
+
+        $("body").on("click", ".close", function() {
+            $('#myModal').hide();
+            $('.modal-content').hide();
+        });
+
+        $("body").on("click", ".mainBody", function() {
+            $('#myModal').hide();
+            $('.modal-content').hide();
+        });
+    },
 
     fetchBooks: function() {
 
@@ -57,32 +94,39 @@ const app = {
                 // console.log(data);
                 app.books = data.items;
                 app.makeHTML(data);
+                app.makeHTMLTwo(data);
+                app.modal(data);
             }
         })
     },
 
 }
 
+// popup modal
 
-$(document).on('click', '.popup', function() {
-    var myTargetModal = $(this).attr('href');
-    $('#myModal').hide();
-    $('.modal-content').hide();
+// $(document).on('click', '.popup', function() {
+//     var myTargetModal = $(this).attr('href');
+//     $('#myModal').hide();
+//     $('.modal-content').hide();
 
-    $('#myModal').fadeIn();
-    $(myTargetModal).fadeIn();
-    return false;
-});
+//     $('#myModal').fadeIn();
+//     $(myTargetModal).fadeIn();
+//     return false;
+// });
 
-$("body").on("click", ".close", function() {
-    $('#myModal').hide();
-    $('.modal-content').hide();
-});
+// $("body").on("click", ".close", function() {
+//     $('#myModal').hide();
+//     $('.modal-content').hide();
+// });
 
-$("body").on("click", ".mainBody", function() {
-    $('#myModal').hide();
-    $('.modal-content').hide();
-});
+// $("body").on("click", ".mainBody", function() {
+//     $('#myModal').hide();
+//     $('.modal-content').hide();
+// });
+
+
+
+// smooth scroll 
 
 document.addEventListener('readystatechange', function() {
     if (document.readyState === "complete") {
