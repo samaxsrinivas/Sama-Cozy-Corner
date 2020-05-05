@@ -599,27 +599,42 @@ section {
     #fourthBox {
         margin-bottom: 100px;
     }
+    .section1 {
+        height: 100vh;
+    }
+    .section2 {
+        height: 150vh;
+    }
+    .section3 {
+        height: 125vh;
+    }
+    .section4 {
+        height: 100vh;
+    }
+    .section5 {
+        height: 130vh;
+    }
     /* mainCover */
     .plant12 {
         height: 40vh;
     }
     .title {
-        font-size: 80px;
-        left: 30px;
+        font-size: 100px;
+        left: 50px;
         right: 30px;
         top: 40%;
         padding-bottom: 15px;
     }
     .title2 {
-        font-size: 55px;
-        left: 30px;
+        font-size: 75px;
+        left: 50px;
         right: 30px;
         padding-bottom: 15px;
         top: 50%;
     }
     .subtitle {
-        font-size: 20px;
-        left: 30px;
+        font-size: 30px;
+        left: 50px;
         right: 30px;
         top: 75%
     }
@@ -635,14 +650,14 @@ section {
         z-index: 7;
     }
     .textbox {
-        left: 40%;
-        top: 43%;
+        left: 45%;
+        top: 48%;
         z-index: 8;
-        width: 200px;
+        width: 250px;
         height: 350px;
     }
     .directions {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     /* section 1 */
     .pillow1,
@@ -712,11 +727,11 @@ section {
         right: 0;
     }
     /* section 5 */
-    .section5 {
-        height: 355px;
+    .book5 {
+        bottom: 0;
     }
     .wrapLink {
-        height: 100vh;
+        height: 50vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -727,9 +742,7 @@ section {
         top: 0;
         text-align: center;
         color: white;
-        margin-top: 49vh;
-        /* left: 40%;
-        right: 40%; */
+        margin-top: 30vw;
     }
 }
 
@@ -901,7 +914,7 @@ section {
     }
     /* section 5 */
     .section5 {
-        height: 355px;
+        height: 100vh;
     }
     .wrapLink {
         height: 100vh;
