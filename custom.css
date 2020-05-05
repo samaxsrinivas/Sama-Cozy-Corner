@@ -14,7 +14,7 @@ body {
     overflow-y: hidden;
 }
 
-.mainCover {
+#section0 {
     width: 100vw;
     height: 100vh;
     z-index: 1;
@@ -239,16 +239,22 @@ body {
 
 /* directions */
 
-section {
+#section1 {
     width: 100vw;
     height: 100vh;
     z-index: 1;
     position: relative;
-}
-
-#directions {
     background: linear-gradient(180deg, rgba(186, 186, 186, 0.75) 0%, rgba(255, 253, 251, 0.75) 100%);
 }
+
+
+/* .direction {
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    background: linear-gradient(180deg, rgba(186, 186, 186, 0.75) 0%, rgba(255, 253, 251, 0.75) 100%);
+} */
 
 .plant4 {
     position: absolute;
