@@ -221,6 +221,9 @@ body {
     cursor: pointer;
 }
 
+
+/* directions */
+
 section {
     width: 100vw;
     height: 100vh;
@@ -256,12 +259,20 @@ section {
     font-size: 27px;
 }
 
+
+/* section 1 */
+
 .section1 {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
     position: relative;
 }
 
 .popup {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .pillow1 {
@@ -280,7 +291,47 @@ section {
     object-fit: cover;
     top: 110px;
     right: 16%;
-    z-index: 10;
+    z-index: 5;
+}
+
+
+/* section 2 */
+
+.section2 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.couch1 {
+    position: absolute;
+    object-fit: cover;
+    width: 70vw;
+    height: auto;
+    margin-top: 400px;
+}
+
+.blanket1 {
+    z-index: 3;
+    position: absolute;
+    object-fit: cover;
+    width: 30vw;
+    height: auto;
+    margin-top: 540px;
+    margin-left: 40%;
+}
+
+.book2 {
+    position: absolute;
+    object-fit: cover;
+    width: 20vw;
+    height: auto;
+    margin-top: 450px;
+    margin-left: 30%;
+    border: 1px solid black;
+    z-index: 5;
 }
 
 
