@@ -374,7 +374,7 @@ section {
 
 .section4 {
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     position: relative;
     margin: 0;
     padding: 0;
@@ -388,7 +388,7 @@ section {
     height: auto;
     text-align: center;
     vertical-align: center;
-    top: 45vh;
+    top: 60vh;
     left: 25vw;
 }
 
