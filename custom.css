@@ -440,6 +440,63 @@ section {
     right: 25vw;
 }
 
+.coffee {
+    position: relative;
+    object-fit: cover;
+    z-index: 9;
+    width: 30vw;
+    height: auto;
+    text-align: center;
+    vertical-align: center;
+    top: 60vh;
+    left: 38vw;
+    right: 39vw;
+    -webkit-animation: myOrbit 4s linear infinite;
+    /* Chrome, Safari 5 */
+    -moz-animation: myOrbit 4s linear infinite;
+    /* Firefox 5-15 */
+    -o-animation: myOrbit 4s linear infinite;
+    /* Opera 12+ */
+    animation: myOrbit 4s linear infinite;
+    /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+@-webkit-keyframes myOrbit {
+    from {
+        -webkit-transform: rotate(0deg) translateX(40vw) rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg) translateX(40vw) rotate(-360deg);
+    }
+}
+
+@-moz-keyframes myOrbit {
+    from {
+        -moz-transform: rotate(0deg) translateX(40vw) rotate(0deg);
+    }
+    to {
+        -moz-transform: rotate(360deg) translateX(40vw) rotate(-360deg);
+    }
+}
+
+@-o-keyframes myOrbit {
+    from {
+        -o-transform: rotate(0deg) translateX(40vw) rotate(0deg);
+    }
+    to {
+        -o-transform: rotate(360deg) translateX(40vw) rotate(-360deg);
+    }
+}
+
+@keyframes myOrbit {
+    from {
+        transform: rotate(0deg) translateX(40vw) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateX(40vw) rotate(-360deg);
+    }
+}
+
 
 /* section 5 */
 
