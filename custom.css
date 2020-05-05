@@ -742,25 +742,41 @@ section {
         margin: 0;
     }
     .modal-content {
-        padding-bottom: 75px;
         width: 95vw;
         margin: 0 auto;
+        height: auto;
     }
     .books {
         width: 100vw;
-        height: 80vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 15px;
     }
     .left {
         align-items: center;
+        height: 100%;
     }
     .right {
         width: 90%;
-        height: 100% auto;
+        margin: 0;
+        justify-content: flex-start;
         padding-bottom: 15px;
-        margin-right: 15px;
+    }
+    .bookCover {
+        height: 85%;
+    }
+    .bookTitle {
+        padding-right: 30px;
+        font-size: 4rem;
+    }
+    .author {
+        padding-right: 30px;
+        font-size: 2rem;
+    }
+    .description {
+        padding-right: 30px;
+        font-size: 1rem;
     }
     #firstBox {
         margin-bottom: 100px;
