@@ -191,14 +191,8 @@ const app = {
 //     $('.modal-content').hide();
 // });
 
+// smooth scroll
 
-
-// smooth scroll 
-
-document.addEventListener('readystatechange', function() {
-    if (document.readyState === "complete") {
-        // Initiate parallax
-        var p = new Parallax();
-        // p.init();
-    }
+new vanillaJsuParallax({
+    items: document.querySelectorAll('.pillows')
 });
