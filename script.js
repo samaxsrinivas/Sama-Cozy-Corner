@@ -83,3 +83,11 @@ $("body").on("click", ".mainBody", function() {
     $('#myModal').hide();
     $('.modal-content').hide();
 });
+
+document.addEventListener('readystatechange', function() {
+    if (document.readyState === "complete") {
+        // Initiate parallax
+        var p = new Parallax();
+        // p.init();
+    }
+});

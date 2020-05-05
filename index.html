@@ -33,10 +33,10 @@
 
         </div>
         <!-- The instructions -->
-        <section>
+        <section id="directions">
             <img class="plant4" src="images/plant4.png">
             <div class="textbox">
-                <h5 id="directions" class="directions">Click on the scattered books you find to learn their information!</h5>
+                <h5 class="directions">Click on the scattered books you find to learn their information!</h5>
             </div>
         </section>
 
@@ -74,13 +74,12 @@
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.3.11/dist/locomotive-scroll.min.js "></script>
+    <script src="js/magic-parallax.js"></script>
     <script src="script.js "></script>
     <script>
         (function() {
             app.initialize();
-
-            // var scroll = new LocomotiveScroll();
+            p.init();
         })();
     </script>
 </body>
