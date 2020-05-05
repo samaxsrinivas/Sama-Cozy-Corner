@@ -9,9 +9,9 @@ body {
 }
 
 .mainBody {
-    scroll-behavior: smooth;
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .mainCover {
@@ -142,7 +142,7 @@ body {
     z-index: 10;
     /* Sit on top */
     padding-top: 100px;
-    padding-bottom: 200px;
+    margin-bottom: 200px;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -463,7 +463,8 @@ section {
 }
 
 .wrapLink {
-    display: block;
+    position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -472,11 +473,13 @@ section {
 }
 
 .portfolio {
-    color: white;
+    position: absolute;
+    color: black;
     font-family: Roboto;
     font-size: 25px;
     font-weight: 300;
     z-index: 9;
+    margin-top: 50px;
 }
 
 
@@ -552,6 +555,7 @@ section {
     }
     .modal-content {
         width: 95vw;
+        height: 80vh;
         margin: 0 auto;
     }
     .books {
@@ -700,6 +704,8 @@ section {
     .wrapLink {
         height: 100vh;
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .portfolio {
         font-size: 25px;
@@ -707,6 +713,7 @@ section {
         top: 0;
         text-align: center;
         color: white;
+        margin-top: 49vh;
         /* left: 40%;
         right: 40%; */
     }
