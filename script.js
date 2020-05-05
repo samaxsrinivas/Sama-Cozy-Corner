@@ -62,6 +62,23 @@ const app = {
         $('.modal-content').html(theHTML);
     },
 
+    // makeHTML2: function() {
+    //     var theHTML = '';
+    //     for (var i = 1; i < 2; i++) {
+    //         theHTML += "<div class='books'>";
+    //         theHTML += "<div class='left'>";
+    //         theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
+    //         theHTML += "</div>";
+    //         theHTML += "<div class='right'>";
+    //         theHTML += "<h3 class='bookTitle'>" + app.books[i].volumeInfo.title + "</h3>";
+    //         theHTML += "<h5 class='author'>" + "By " + app.books[i].volumeInfo.authors + "</h5>";
+    //         theHTML += "<p class='description'>" + app.books[i].volumeInfo.description + "</p>";
+    //         theHTML += "</div>";
+    //         theHTML += "</div>";
+    //     }
+    //     $('.modal-content').html(theHTML);
+    // },
+
 
     fetchBooks: function() {
 

@@ -6,11 +6,11 @@
 body {
     scroll-behavior: smooth;
     font-family: Roboto;
+    background-color: #f2f2f2;
 }
 
 .mainBody {
     width: 100%;
-    background-color: #f2f2f2;
 }
 
 .mainCover {
@@ -303,6 +303,8 @@ section {
     position: relative;
     margin: 0;
     padding: 0;
+    /* background-image: url('images/brick.jpg');
+    object-fit: cover; */
 }
 
 .couch1 {
@@ -317,20 +319,19 @@ section {
     z-index: 3;
     position: absolute;
     object-fit: cover;
-    width: 30vw;
+    width: 20%;
     height: auto;
-    margin-top: 540px;
-    margin-left: 40%;
+    margin-top: 500px;
+    margin-left: 45%;
 }
 
 .book2 {
     position: absolute;
     object-fit: cover;
-    width: 20vw;
+    width: 16vw;
     height: auto;
-    margin-top: 450px;
-    margin-left: 30%;
-    border: 1px solid black;
+    margin-top: 475px;
+    margin-left: 36%;
     z-index: 5;
 }
 
