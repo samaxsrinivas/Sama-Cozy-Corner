@@ -9,45 +9,9 @@ const app = {
 
     },
 
-    // imageAppend: function() {
-    //     const data = app.books[i];
-    //     const images = $(document.getElementsByClassName("popup")).findAll();
-    //     images.forEach((image, index) => {
-    //         $(image).click(() => {
-    //             if (images[i] == data[index]) {
-    //                 // Get the modal
-    //                 var modal = document.getElementById("myModal");
-
-    //                 // Get the button that opens the modal
-    //                 var btn = document.getElementById("listBooks");
-
-    //                 // Get the <span> element that closes the modal
-    //                 var span = document.getElementsByClassName("close")[0];
-
-    //                 // When the user clicks the button, open the modal 
-    //                 btn.onclick = function myFunction() {
-    //                     modal.style.display = "block";
-    //                 }
-
-    //                 // When the user clicks on <span> (x), close the modal
-    //                 span.onclick = function myFunction() {
-    //                     modal.style.display = "none";
-    //                 }
-
-    //                 // When the user clicks anywhere outside of the modal, close it
-    //                 window.onclick = function myFunction(event) {
-    //                     if (event.target == modal) {
-    //                         modal.style.display = "none";
-    //                     }
-    //                 }
-    //             }
-    //         })
-    //     });
-    // },
-
     makeHTML: function() {
         var theHTML = '';
-        for (var i = 0; i < 1; i++) {
+        for (var i = 0; i < app.books.length; i++) {
             theHTML += "<div class='books'>";
             theHTML += "<div class='left'>";
             theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
@@ -60,7 +24,17 @@ const app = {
             theHTML += "</div>";
         }
         $('.modal-content').html(theHTML);
+
     },
+
+    // imageAppend: function() {
+    //     // const data = app.books[i];
+    //     // const images = $(document.getElementsByTagName("button")).length;
+
+    //     function myFunction() {
+    //         document.getElementsByClassName("books")[0].innerHTML = data[1];
+    //     }
+    // },
 
     // makeHTML2: function() {
     //     var theHTML = '';
@@ -113,7 +87,10 @@ const app = {
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("listBooks");
+// var btn = document.getElementById("listBooks");
+var btn = document.getElementsByClassName("popup")[0];
+var btn = document.getElementsByClassName("popup")[1];
+
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
