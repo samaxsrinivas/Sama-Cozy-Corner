@@ -231,6 +231,10 @@ body {
     padding-bottom: 100px;
 }
 
+#fifthBox {
+    padding-bottom: 100px;
+}
+
 
 /* directions */
 
@@ -324,7 +328,7 @@ section {
 }
 
 .blanket1 {
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     object-fit: cover;
     width: 20%;
@@ -345,6 +349,69 @@ section {
 
 
 /* section 3 */
+
+.section3 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.book3 {
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
+    width: 50%;
+    height: auto;
+    margin-top: 30%;
+    margin-left: 50%;
+    bottom: 0;
+}
+
+
+/* section 4 */
+
+.section4 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.book4 {
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    vertical-align: center;
+    top: 45vh;
+    left: 25vw;
+}
+
+
+/* section 4 */
+
+.section5 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.book5 {
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: center;
+}
 
 
 /* object css */

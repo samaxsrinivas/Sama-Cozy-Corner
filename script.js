@@ -51,6 +51,69 @@ const app = {
         });
     },
 
+    makeHTMLThree: function() {
+        var myTargetModal = $(this).attr('#thirdBox');
+        var theHTML = '';
+        for (var i = 4; i < 5; i++) {
+            theHTML += "<div class='books'>";
+            theHTML += "<div class='left'>";
+            theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
+            theHTML += "</div>";
+            theHTML += "<div class='right'>";
+            theHTML += "<h3 class='bookTitle'>" + app.books[i].volumeInfo.title + "</h3>";
+            theHTML += "<h5 class='author'>" + "By " + app.books[i].volumeInfo.authors + "</h5>";
+            theHTML += "<p class='description'>" + app.books[i].volumeInfo.description + "</p>";
+            theHTML += "</div>";
+            theHTML += "</div>";
+        }
+        // $(myTargetModal).html(theHTML);
+        $(document).on('click', myTargetModal, function() {
+            $('#thirdBox').html(theHTML);
+        });
+    },
+
+    makeHTMLFour: function() {
+        var myTargetModal = $(this).attr('#fourthBox');
+        var theHTML = '';
+        for (var i = 5; i < 6; i++) {
+            theHTML += "<div class='books'>";
+            theHTML += "<div class='left'>";
+            theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
+            theHTML += "</div>";
+            theHTML += "<div class='right'>";
+            theHTML += "<h3 class='bookTitle'>" + app.books[i].volumeInfo.title + "</h3>";
+            theHTML += "<h5 class='author'>" + "By " + app.books[i].volumeInfo.authors + "</h5>";
+            theHTML += "<p class='description'>" + app.books[i].volumeInfo.description + "</p>";
+            theHTML += "</div>";
+            theHTML += "</div>";
+        }
+        // $(myTargetModal).html(theHTML);
+        $(document).on('click', myTargetModal, function() {
+            $('#fourthBox').html(theHTML);
+        });
+    },
+
+    makeHTMLFive: function() {
+        var myTargetModal = $(this).attr('#fifthBox');
+        var theHTML = '';
+        for (var i = 6; i < 9; i++) {
+            theHTML += "<div class='books'>";
+            theHTML += "<div class='left'>";
+            theHTML += "<img class='bookCover' src='" + app.books[i].volumeInfo.imageLinks.thumbnail + "'>";
+            theHTML += "</div>";
+            theHTML += "<div class='right'>";
+            theHTML += "<h3 class='bookTitle'>" + app.books[i].volumeInfo.title + "</h3>";
+            theHTML += "<h5 class='author'>" + "By " + app.books[i].volumeInfo.authors + "</h5>";
+            theHTML += "<p class='description'>" + app.books[i].volumeInfo.description + "</p>";
+            theHTML += "</div>";
+            theHTML += "</div>";
+        }
+        // $(myTargetModal).html(theHTML);
+        $(document).on('click', myTargetModal, function() {
+            $('#fifthBox').html(theHTML);
+        });
+    },
+
     modal: function() {
         $(document).on('click', '.popup', function() {
             var myTargetModal = $(this).attr('href');
@@ -95,12 +158,16 @@ const app = {
                 app.books = data.items;
                 app.makeHTML(data);
                 app.makeHTMLTwo(data);
+                app.makeHTMLThree(data);
+                app.makeHTMLFour(data);
+                app.makeHTMLFive(data);
                 app.modal(data);
             }
         })
     },
 
 }
+
 
 // popup modal
 
