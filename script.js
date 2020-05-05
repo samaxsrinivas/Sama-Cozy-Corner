@@ -1,28 +1,28 @@
-// Get the modal
-var modal = document.getElementById("myModal");
+// // Get the modal
+// var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("listBooks");
+// // Get the button that opens the modal
+// var btn = document.getElementById("listBooks");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function myFunction() {
-    modal.style.display = "block";
-}
+// // When the user clicks the button, open the modal 
+// btn.onclick = function myFunction() {
+//     modal.style.display = "block";
+// }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function myFunction() {
-    modal.style.display = "none";
-}
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function myFunction() {
+//     modal.style.display = "none";
+// }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function myFunction(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function myFunction(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
 
 const app = {
 
@@ -33,6 +33,40 @@ const app = {
             app.fetchBooks();
         });
 
+    },
+
+    imageAppend: function() {
+        const data = items;
+        const images = $(document.getElementsByClassName("popup")).findAll()
+        images.forEach(('.book1', data[0]) => {
+            $('.book1').click(() => {
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the button that opens the modal
+                var btn = document.getElementById("listBooks");
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks the button, open the modal 
+                btn.onclick = function myFunction() {
+                    modal.style.display = "block";
+                }
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function myFunction() {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function myFunction(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            });
+        });
     },
 
     makeHTML: function() {
@@ -52,15 +86,6 @@ const app = {
         $('.modal-content').html(theHTML);
     },
 
-    // sliceObjects: function() {
-    //     var click = app.books.slice.call(document.getElementsByClassName("booksmoda"));
-
-    //     click.forEach(function(element, index) {
-    //         element.addEventListener("click", function() {
-    //             console.log(index);
-    //         });
-    //     });
-    // },
 
     fetchBooks: function() {
 
@@ -83,6 +108,7 @@ const app = {
                 console.log(data);
                 app.books = data.items;
                 app.makeHTML(data);
+                app.imageAppend(data);
             }
         })
     },
