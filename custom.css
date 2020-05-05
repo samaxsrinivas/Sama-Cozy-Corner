@@ -6,7 +6,6 @@
 body {
     scroll-behavior: smooth;
     font-family: Roboto;
-    background-color: #f2f2f2;
 }
 
 .mainBody {
@@ -18,6 +17,7 @@ body {
     width: 100%;
     height: 100vh;
     z-index: 1;
+    background: linear-gradient(180deg, rgb(247, 247, 247) 0%, rgba(186, 186, 186, 0.75) 100%);
 }
 
 .plant2 {
@@ -245,6 +245,10 @@ section {
     position: relative;
 }
 
+#directions {
+    background: linear-gradient(180deg, rgba(186, 186, 186, 0.75) 0%, rgba(255, 253, 251, 0.75) 100%);
+}
+
 .plant4 {
     position: absolute;
     width: 80%;
@@ -285,15 +289,56 @@ section {
     width: 100vw;
     height: 100vh;
     position: relative;
+    background: linear-gradient(180deg, rgba(255, 253, 251, 0.75) 0%, rgba(248, 192, 127, 0.5) 100%);
 }
 
-.pillow1 {
+.pillows {
+    display: flex;
+    flex-direction: column;
+}
+
+.pillow1,
+.pillow2,
+.pillow3,
+.pillow4,
+.pillow5,
+.pillow6 {
     position: absolute;
     width: 50%;
     height: auto;
     object-fit: cover;
-    top: 100px;
+    top: 25%;
     right: 0;
+    z-index: 5;
+}
+
+.pillow2 {
+    top: 10%;
+    z-index: 4;
+    right: 15%;
+}
+
+.pillow3 {
+    top: 60%;
+    z-index: 7;
+    left: 10%;
+}
+
+.pillow4 {
+    top: 30%;
+    z-index: 6;
+    right: 20%;
+}
+
+.pillow5 {
+    top: 90%;
+    z-index: 6;
+    left: 20%;
+}
+
+.pillow6 {
+    top: -30%;
+    right: 5%;
 }
 
 .book1 {
@@ -301,9 +346,9 @@ section {
     width: 20%;
     height: auto;
     object-fit: cover;
-    top: 110px;
+    top: 25%;
     right: 16%;
-    z-index: 5;
+    z-index: 9;
 }
 
 
@@ -315,8 +360,7 @@ section {
     position: relative;
     margin: 0;
     padding: 0;
-    /* background-image: url('images/brick.jpg');
-    object-fit: cover; */
+    background: linear-gradient(180deg, rgba(248, 192, 127, 0.5) 0%, rgba(123, 121, 250, 0.75) 100%);
 }
 
 .couch1 {
@@ -356,6 +400,7 @@ section {
     position: relative;
     margin: 0;
     padding: 0;
+    background: linear-gradient(180deg, rgba(123, 121, 250, 0.74) 0%, rgba(0, 26, 120, 0.5) 100%);
 }
 
 .book3 {
@@ -374,16 +419,17 @@ section {
 
 .section4 {
     width: 100vw;
-    height: 150vh;
+    height: 130vh;
     position: relative;
     margin: 0;
     padding: 0;
+    background: linear-gradient(180deg, rgba(0, 26, 120, 0.5) 0%, #D0D0D0 100%);
 }
 
 .book4 {
     position: absolute;
     object-fit: cover;
-    z-index: 6;
+    z-index: 9;
     width: 50vw;
     height: auto;
     text-align: center;
@@ -401,6 +447,7 @@ section {
     position: relative;
     margin: 0;
     padding: 0;
+    background: linear-gradient(180deg, #D0D0D0 0%, #FFFFFF 100%);
 }
 
 .book5 {
